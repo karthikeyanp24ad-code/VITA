@@ -1,0 +1,570 @@
+/* =========================================================
+   YOGAMAT — PROFILE PAGE
+   ========================================================= */
+
+.profile-page {
+  min-height: 100vh;
+  background: #faf9fc;
+  color: #272333;
+  padding: 0 36px 52px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.profile-header {
+  padding: 36px 0 28px;
+}
+
+.profile-eyebrow {
+  color: #8b6abf;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.profile-title {
+  margin: 0 0 10px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: #1e1a28;
+  line-height: 1.05;
+}
+
+.profile-subtitle {
+  margin: 0;
+  color: #7041c2;
+  font-size: 14px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+
+/* =========================================================
+   TWO-COLUMN BODY
+   ========================================================= */
+
+.profile-body {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 20px;
+  align-items: start;
+}
+
+
+/* =========================================================
+   FORM CARD (left)
+   ========================================================= */
+
+.profile-card {
+  background: #ffffff;
+  border: 1px solid #eae5f0;
+  border-radius: 18px;
+  padding: 28px 28px 24px;
+  box-shadow: 0 4px 20px rgba(60, 40, 90, 0.05);
+}
+
+/* card header */
+.profile-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.profile-avatar {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  background: #eee5fa;
+  color: #7041c2;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-card-title {
+  margin: 0 0 3px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #1e1a28;
+  letter-spacing: -0.02em;
+}
+
+.profile-card-sub {
+  margin: 0;
+  color: #9a91a4;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.profile-divider {
+  height: 1px;
+  background: #f0ecf6;
+  margin: 0 0 22px;
+}
+
+
+/* =========================================================
+   FORM FIELDS
+   ========================================================= */
+
+.pf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.pf-field--full {
+  grid-column: 1 / -1;
+}
+
+.pf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* label row */
+.pf-label-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.pf-label-row--spread {
+  justify-content: space-between;
+}
+
+.pf-label {
+  color: #5a5265;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.pf-badge {
+  font-size: 9.5px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 20px;
+  background: #f3f0f8;
+  color: #9188a2;
+  letter-spacing: 0.04em;
+}
+
+.pf-badge--required {
+  background: #f0e9fa;
+  color: #7041c2;
+}
+
+/* inputs */
+.pf-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #e4ddf0;
+  border-radius: 9px;
+  background: #faf8fd;
+  color: #2a2338;
+  font-size: 13px;
+  font-family: inherit;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  outline: none;
+}
+
+.pf-input::placeholder {
+  color: #c0b8ca;
+}
+
+.pf-input:focus {
+  border-color: #a87de0;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(168, 125, 224, 0.14);
+}
+
+.pf-input--error {
+  border-color: #d08080;
+  background: #fff8f8;
+}
+
+.pf-input--error:focus {
+  box-shadow: 0 0 0 3px rgba(208, 128, 128, 0.14);
+}
+
+/* remove number spinners */
+.pf-input[type="number"]::-webkit-inner-spin-button,
+.pf-input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pf-input[type="number"] { -moz-appearance: textfield; }
+
+/* input with unit suffix */
+.pf-input-unit {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.pf-input-unit .pf-input {
+  padding-right: 38px;
+}
+
+.pf-unit {
+  position: absolute;
+  right: 12px;
+  color: #a29aaa;
+  font-size: 11.5px;
+  font-weight: 500;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* select */
+.pf-select {
+  width: 100%;
+  height: 40px;
+  padding: 0 32px 0 12px;
+  border: 1px solid #e4ddf0;
+  border-radius: 9px;
+  background: #faf8fd url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23a29aaa' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 12px center;
+  -webkit-appearance: none;
+  appearance: none;
+  color: #2a2338;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.pf-select:focus {
+  border-color: #a87de0;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(168, 125, 224, 0.14);
+}
+
+/* error message */
+.pf-error {
+  margin: 0;
+  color: #b85858;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* section sub-heading */
+.pf-section-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #7041c2;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 8px 0 16px;
+}
+
+.pf-section-icon {
+  font-size: 14px;
+}
+
+/* ── full-width field spacing ── */
+.pf-field--full {
+  margin-bottom: 16px;
+}
+
+
+/* =========================================================
+   SLIDER
+   ========================================================= */
+
+.pf-slider-val {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #7041c2;
+}
+
+.pf-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 99px;
+  background: linear-gradient(
+    to right,
+    #7041c2 0%,
+    #7041c2 var(--fill, 15%),
+    #e8e2f0 var(--fill, 15%),
+    #e8e2f0 100%
+  );
+  outline: none;
+  cursor: pointer;
+  margin: 6px 0 4px;
+}
+
+.pf-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #7041c2;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(112, 65, 194, 0.35);
+  cursor: pointer;
+  transition: box-shadow 0.18s ease, transform 0.15s ease;
+}
+
+.pf-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #7041c2;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(112, 65, 194, 0.35);
+  cursor: pointer;
+}
+
+.pf-slider:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgba(112, 65, 194, 0.2);
+  transform: scale(1.1);
+}
+
+.pf-slider:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 4px rgba(112, 65, 194, 0.2);
+}
+
+.pf-slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  color: #b0a8b8;
+  font-size: 9.5px;
+  margin-top: 2px;
+}
+
+
+/* =========================================================
+   SAVE BUTTON
+   ========================================================= */
+
+.pf-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid #f0ecf6;
+}
+
+.pf-save-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 26px;
+  border: none;
+  border-radius: 10px;
+  background: #7041c2;
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(112, 65, 194, 0.28);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.pf-save-btn:hover {
+  background: #5f34a8;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(112, 65, 194, 0.34);
+}
+
+.pf-save-btn:focus-visible {
+  outline: 3px solid rgba(112, 65, 194, 0.4);
+  outline-offset: 2px;
+}
+
+.pf-save-btn--saved {
+  background: #4d9670;
+  box-shadow: 0 6px 18px rgba(77, 150, 112, 0.28);
+}
+
+.pf-save-btn--saved:hover {
+  background: #3e7d5c;
+}
+
+
+/* =========================================================
+   ASIDE — right column
+   ========================================================= */
+
+.profile-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* privacy card */
+.profile-privacy-card {
+  background: #ffffff;
+  border: 1px solid #eae5f0;
+  border-radius: 16px;
+  padding: 22px 22px 20px;
+  box-shadow: 0 4px 16px rgba(60, 40, 90, 0.05);
+}
+
+.privacy-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: #f0e9fa;
+  color: #7041c2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.privacy-title {
+  margin: 0 0 8px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #1e1a28;
+  letter-spacing: -0.02em;
+}
+
+.privacy-body {
+  margin: 0 0 14px;
+  color: #7c7288;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.privacy-note {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #5f9e7a;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* quote card */
+.profile-quote-card {
+  background: #ffffff;
+  border: 1px solid #eae5f0;
+  border-radius: 16px;
+  padding: 22px 22px 20px;
+  box-shadow: 0 4px 16px rgba(60, 40, 90, 0.05);
+}
+
+.quote-mark {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 52px;
+  line-height: 0.8;
+  color: #d8cfe8;
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+.quote-text {
+  margin: 0 0 12px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  color: #2a2338;
+  line-height: 1.6;
+}
+
+.quote-attr {
+  margin: 0;
+  color: #b0a8b8;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .profile-page {
+    padding: 0 24px 44px;
+  }
+
+  .profile-body {
+    grid-template-columns: 1fr 240px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 860px) {
+  .profile-page {
+    padding: 0 18px 36px;
+  }
+
+  .profile-body {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-page {
+    padding: 0 14px 28px;
+  }
+
+  .profile-header {
+    padding: 24px 0 20px;
+  }
+
+  .profile-title {
+    font-size: 32px;
+  }
+
+  .profile-card {
+    padding: 20px 16px 18px;
+  }
+
+  .pf-row {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-aside {
+    grid-template-columns: 1fr;
+  }
+
+  .pf-actions {
+    justify-content: stretch;
+  }
+
+  .pf-save-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

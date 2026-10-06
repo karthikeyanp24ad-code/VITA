@@ -1,0 +1,435 @@
+/* =========================================================
+   YOGAMAT — YOGA SESSIONS PAGE
+   ========================================================= */
+
+.sessions-page {
+  min-height: 100vh;
+  background: #faf9fc;
+  color: #272333;
+  padding: 0 36px 48px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.sessions-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 36px 0 28px;
+  gap: 20px;
+}
+
+.sessions-eyebrow {
+  color: #8b6abf;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.sessions-title {
+  margin: 0 0 8px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: #1e1a28;
+  line-height: 1.05;
+}
+
+.sessions-subtitle {
+  margin: 0;
+  color: #7e7589;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* right counter */
+.sessions-header-right {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-bottom: 6px;
+}
+
+.pose-count-num {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #7041c2;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.pose-count-label {
+  color: #9a91a4;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+
+/* =========================================================
+   BANNER
+   ========================================================= */
+
+.sessions-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 20px;
+  margin-bottom: 28px;
+  background: #ffffff;
+  border: 1px solid #e8e3f0;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(60, 40, 90, 0.04);
+}
+
+.sessions-banner-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
+}
+
+.banner-icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #f0e9fa;
+  color: #7041c2;
+}
+
+.banner-title {
+  margin: 0 0 3px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #2a2338;
+}
+
+.banner-body {
+  margin: 0;
+  font-size: 12px;
+  color: #8a7f96;
+  line-height: 1.6;
+  max-width: 640px;
+}
+
+.banner-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  padding: 8px 14px;
+  border: 1px solid #e0d8ed;
+  border-radius: 8px;
+  background: #faf7fd;
+  color: #7041c2;
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.banner-link:hover {
+  background: #f0e9fa;
+  border-color: #c8aee8;
+}
+
+
+/* =========================================================
+   POSE GRID
+   ========================================================= */
+
+.pose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+/* =========================================================
+   POSE CARD
+   ========================================================= */
+
+.pose-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #eae5f0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(60, 40, 90, 0.05);
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.pose-card:hover {
+  box-shadow: 0 12px 32px rgba(60, 40, 90, 0.11);
+  transform: translateY(-2px);
+}
+
+/* image */
+.pose-card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #ede7f4;
+}
+
+.pose-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.pose-card:hover .pose-card-image img {
+  transform: scale(1.03);
+}
+
+/* number badge */
+.pose-card-num {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(30, 20, 50, 0.32);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 2px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+}
+
+/* body */
+.pose-card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px 20px;
+  flex: 1;
+}
+
+/* meta */
+.pose-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.pose-level {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: capitalize;
+}
+
+.pose-level--beginner {
+  color: #5f9e7a;
+}
+
+.pose-level--intermediate {
+  color: #8b6abf;
+}
+
+.pose-level--advanced {
+  color: #c0605a;
+}
+
+.pose-duration {
+  color: #a29aaa;
+  font-size: 10.5px;
+  font-weight: 500;
+}
+
+/* name */
+.pose-card-name {
+  margin: 0 0 6px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #1e1a28;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* description */
+.pose-card-desc {
+  margin: 0 0 14px;
+  font-size: 12.5px;
+  color: #7c7288;
+  line-height: 1.65;
+}
+
+/* focus tag */
+.pose-card-focus {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 16px;
+  color: #8a7f96;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.focus-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #b8a8d0;
+  flex-shrink: 0;
+}
+
+/* CTA button */
+.pose-card-cta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 16px;
+  margin-top: auto;
+  border: 1px solid #e8e1f0;
+  border-radius: 10px;
+  background: #faf7fd;
+  color: #3a3248;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.pose-card-cta .cta-arrow {
+  margin-left: auto;
+  color: #b0a4c4;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.pose-card-cta:hover {
+  background: #f0e9fa;
+  border-color: #c8aee8;
+  color: #7041c2;
+}
+
+.pose-card-cta:hover .cta-arrow {
+  transform: translateX(3px);
+  color: #7041c2;
+}
+
+
+/* =========================================================
+   FOOTNOTE
+   ========================================================= */
+
+.sessions-footnote {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 28px;
+  padding: 14px 18px;
+  background: #f5f2f9;
+  border-radius: 10px;
+  color: #8a8096;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.sessions-footnote svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #9b8eb8;
+}
+
+
+/* =========================================================
+   PAGE FOOTER
+   ========================================================= */
+
+.sessions-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 2px 4px;
+  color: #a29aa8;
+  font-size: 9px;
+  letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .sessions-page {
+    padding: 0 24px 40px;
+  }
+
+  .sessions-title {
+    font-size: 36px;
+  }
+
+  .pose-count-num {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .sessions-page {
+    padding: 0 18px 32px;
+  }
+
+  .pose-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .sessions-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .banner-link {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .sessions-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 24px 0 20px;
+  }
+
+  .sessions-title {
+    font-size: 30px;
+  }
+
+  .pose-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .sessions-footer {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

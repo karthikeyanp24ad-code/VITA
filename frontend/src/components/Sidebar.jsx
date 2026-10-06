@@ -1,7 +1,6 @@
 import {
   LayoutDashboard,
   PlaySquare,
-  Video,
   Users,
   User,
   Settings,
@@ -22,12 +21,6 @@ const NAV_ITEMS = [
     to: "/sessions",
     icon: <PlaySquare size={19} />,
     label: "Yoga Sessions",
-  },
-  {
-    to: "/live",
-    icon: <Video size={19} />,
-    label: "Live Sessions",
-    dot: true,
   },
   {
     to: "/mentoring",
@@ -102,9 +95,16 @@ function Sidebar({ isOpen, onClose }) {
           <div className="message-text">Be kind to your pace today.</div>
         </div>
 
-        {/* PROFILE */}
-        <div className="sidebar-profile">
-          <div className="profile-avatar">Y</div>
+        {/* PROFILE — links to /profile */}
+        <NavLink
+          to="/profile"
+          onClick={onClose}
+          className={({ isActive }) =>
+            `sidebar-profile${isActive ? " sidebar-profile--active" : ""}`
+          }
+          aria-label="Go to your profile page"
+        >
+          <div className="profile-avatar" aria-hidden="true">Y</div>
 
           <div className="profile-info">
             <strong>Your profile</strong>
@@ -112,8 +112,8 @@ function Sidebar({ isOpen, onClose }) {
             <small>A little space to feel better.</small>
           </div>
 
-          <ChevronRight size={18} className="profile-arrow" />
-        </div>
+          <ChevronRight size={18} className="profile-arrow" aria-hidden="true" />
+        </NavLink>
 
       </aside>
     </>

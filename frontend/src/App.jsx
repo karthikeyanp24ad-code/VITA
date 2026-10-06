@@ -4,12 +4,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
 
-import Dashboard from "./pages/Dashboard";
-import Sessions from "./pages/Sessions";
-import LiveSession from "./pages/LiveSession";
-import Mentoring from "./pages/Mentoring";
-import Profile from "./pages/Profile";
-import Settings from "./pages/Settings";
+import Dashboard    from "./pages/Dashboard";
+import Sessions     from "./pages/Sessions";
+import PoseSession  from "./pages/PoseSession";
+import LiveSession  from "./pages/LiveSession";
+import Mentoring    from "./pages/Mentoring";
+import Profile      from "./pages/Profile";
+import Settings     from "./pages/Settings";
 
 import "./App.css";
 
@@ -39,12 +40,13 @@ function App() {
 
           <main className="page-content">
             <Routes>
-              <Route path="/"          element={<Dashboard />} />
-              <Route path="/sessions"  element={<Sessions />} />
-              <Route path="/live"      element={<LiveSession />} />
-              <Route path="/mentoring" element={<Mentoring />} />
-              <Route path="/profile"   element={<Profile />} />
-              <Route path="/settings"  element={<Settings />} />
+              <Route path="/"                  element={<Dashboard />} />
+              <Route path="/sessions"          element={<Sessions />} />
+              <Route path="/session/:poseId"   element={<PoseSession />} />
+              <Route path="/live"              element={<LiveSession />} />
+              <Route path="/mentoring"         element={<Mentoring />} />
+              <Route path="/profile"           element={<Profile />} />
+              <Route path="/settings"          element={<Settings />} />
             </Routes>
           </main>
         </div>

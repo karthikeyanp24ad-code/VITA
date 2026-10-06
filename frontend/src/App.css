@@ -298,17 +298,36 @@
   align-items: center;
   gap: 10px;
   margin-top: 16px;
-  padding: 14px 8px 4px;
+  padding: 12px 10px;
   border-top: 1px solid var(--border);
+  border-radius: 10px;
   cursor: pointer;
-  border-radius: 0 0 8px 8px;
-  transition: background 0.15s ease;
+  text-decoration: none;
+  transition: background 0.18s ease;
 }
 
 .sidebar-profile:hover {
   background: #faf7fd;
 }
 
+.sidebar-profile:focus-visible {
+  outline: 2px solid rgba(112, 65, 194, 0.45);
+  outline-offset: 2px;
+}
+
+.sidebar-profile--active {
+  background: var(--purple-lt);
+}
+
+.sidebar-profile--active .profile-info strong {
+  color: #7041bd;
+}
+
+.sidebar-profile--active .profile-arrow {
+  color: #7041c2;
+}
+
+/* ── avatar, info, arrow ── */
 .profile-avatar {
   flex-shrink: 0;
   width: 36px;
@@ -365,6 +384,7 @@
 .profile-arrow {
   flex-shrink: 0;
   color: #c4bfca;
+  transition: color 0.18s ease;
 }
 
 
