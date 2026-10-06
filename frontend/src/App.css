@@ -1,0 +1,546 @@
+/* =========================================================
+   TOKENS
+   ========================================================= */
+
+:root {
+  --sidebar-w: 260px;
+  --topbar-h:  56px;
+  --purple:    #7041c2;
+  --purple-lt: #f0e9fa;
+  --border:    #eeeaf2;
+  --bg:        #faf9fc;
+}
+
+
+/* =========================================================
+   APP LAYOUT
+   ========================================================= */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+
+/* =========================================================
+   SIDEBAR OVERLAY  (mobile dim layer)
+   ========================================================= */
+
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 14, 35, 0.45);
+    z-index: 99;
+    animation: fadeIn 0.22s ease;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--sidebar-w);
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 26px 16px 20px;
+
+  background: #ffffff;
+  border-right: 1px solid var(--border);
+
+  z-index: 100;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* smooth scroll-bar */
+  scrollbar-width: thin;
+  scrollbar-color: #e0d9ea transparent;
+}
+
+/* mobile: sidebar hidden off-screen by default */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none;
+  }
+
+  .sidebar--open {
+    transform: translateX(0);
+    box-shadow: 4px 0 32px rgba(60, 40, 90, 0.18);
+  }
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 10px 26px;
+}
+
+.logo-mark {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--purple-lt);
+  color: var(--purple);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 19px;
+  font-style: italic;
+}
+
+.logo-text {
+  min-width: 0;
+  flex: 1;
+}
+
+.logo-title {
+  color: #30293a;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.logo-subtitle {
+  margin-top: 3px;
+  color: #9b91a5;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+/* close button — only on mobile */
+.sidebar-close-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #8a8096;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.sidebar-close-btn:hover {
+  background: var(--purple-lt);
+  color: var(--purple);
+}
+
+@media (max-width: 768px) {
+  .sidebar-close-btn {
+    display: flex;
+  }
+}
+
+
+/* =========================================================
+   SIDEBAR SECTION LABEL
+   ========================================================= */
+
+.sidebar-section-title {
+  padding: 6px 12px 10px;
+  color: #a29aaa;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 42px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: #71687d;
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 500;
+  transition: background 0.18s ease, color 0.18s ease;
+  /* allow text to wrap for long labels */
+  white-space: normal;
+  line-height: 1.35;
+}
+
+.nav-item svg {
+  flex-shrink: 0;
+}
+
+.nav-item span:not(.live-dot) {
+  flex: 1;
+  min-width: 0;
+}
+
+.nav-item:hover {
+  background: #faf7fd;
+  color: var(--purple);
+}
+
+.nav-item.active {
+  background: var(--purple-lt);
+  color: #7041bd;
+  font-weight: 600;
+}
+
+.nav-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  border-radius: 0 4px 4px 0;
+  background: #7443c1;
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  margin-left: auto;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #79af8e;
+}
+
+
+/* =========================================================
+   SMALL MOMENTS CARD
+   ========================================================= */
+
+.sidebar-message {
+  margin-top: auto;
+  padding: 17px 15px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #faf7ff, #f4effb);
+  border: 1px solid #eee7f7;
+}
+
+.message-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 11px;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #8051bd;
+}
+
+.message-title {
+  color: #3b3245;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.message-text {
+  margin-top: 5px;
+  color: #9a90a4;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SIDEBAR PROFILE
+   ========================================================= */
+
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 14px 8px 4px;
+  border-top: 1px solid var(--border);
+  cursor: pointer;
+  border-radius: 0 0 8px 8px;
+  transition: background 0.15s ease;
+}
+
+.sidebar-profile:hover {
+  background: #faf7fd;
+}
+
+.profile-avatar {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #eee5fa;
+  color: #7545b9;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.profile-info {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow: hidden;
+}
+
+.profile-info strong {
+  color: #413849;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.profile-info span {
+  color: #8f849a;
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.profile-info small {
+  margin-top: 2px;
+  color: #b0a7b6;
+  font-size: 9px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.profile-arrow {
+  flex-shrink: 0;
+  color: #c4bfca;
+}
+
+
+/* =========================================================
+   TOPBAR
+   ========================================================= */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--topbar-h);
+  padding: 0 28px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+}
+
+/* LEFT */
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.topbar-menu-btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #8a8198;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.topbar-menu-btn:hover {
+  background: var(--purple-lt);
+  color: var(--purple);
+}
+
+.topbar-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  min-width: 0;
+}
+
+.breadcrumb-root {
+  color: #a49bb2;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+
+.breadcrumb-sep {
+  color: #cec8d6;
+  flex-shrink: 0;
+  margin: 0 2px;
+}
+
+.breadcrumb-page {
+  color: #1e1a28;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* RIGHT */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.topbar-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #8a8198;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.topbar-date svg { color: #a49bb2; }
+
+.topbar-divider {
+  width: 1px;
+  height: 14px;
+  background: #e0dae8;
+}
+
+.topbar-space {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #8a8198;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.topbar-space svg { color: #a49bb2; }
+
+
+/* =========================================================
+   MAIN AREA
+   ========================================================= */
+
+.main-area {
+  width: calc(100% - var(--sidebar-w));
+  margin-left: var(--sidebar-w);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+}
+
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================= */
+
+/* ── 1280px: hide "Your practice space" label ── */
+@media (max-width: 1280px) {
+  .topbar-space,
+  .topbar-divider {
+    display: none;
+  }
+}
+
+/* ── 1024px: slightly narrower sidebar ── */
+@media (max-width: 1024px) {
+  :root { --sidebar-w: 230px; }
+}
+
+/* ── 768px: sidebar becomes an off-canvas drawer ── */
+@media (max-width: 768px) {
+  :root { --sidebar-w: 260px; }
+
+  .main-area {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .topbar {
+    padding: 0 18px;
+  }
+
+  /* hide breadcrumb root text, keep page name */
+  .breadcrumb-root,
+  .breadcrumb-sep {
+    display: none;
+  }
+}
+
+/* ── 480px: hide date text, keep icon ── */
+@media (max-width: 480px) {
+  .topbar-date span {
+    display: none;
+  }
+
+  .topbar {
+    padding: 0 14px;
+  }
+}
