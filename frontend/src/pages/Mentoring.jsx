@@ -9,8 +9,6 @@ import {
   ArrowLeft,
   X,
   ExternalLink,
-  User,
-  MessageSquare,
   Sparkles,
   ChevronRight,
   AlertCircle,
@@ -482,8 +480,6 @@ function QuestionnaireStep({ mentor, day, slot, form, errors, setF, onSubmit }) 
   const typeId   = useId();
   const notesId  = useId();
   const agreeId  = useId();
-
-  const weekDay = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 
   return (
     <div className="questionnaire-step">
