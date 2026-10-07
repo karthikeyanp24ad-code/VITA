@@ -1,0 +1,212 @@
+{
+  "dataset_name": "VITA Yoga Knowledge Base",
+  "version": "1.0",
+  "purpose": "Runtime ground-truth knowledge for the VITA chatbot.",
+  "supported_poses": [
+    "Goddess Pose",
+    "Downward-Facing Dog",
+    "Warrior II",
+    "Plank Pose",
+    "Tree Pose"
+  ],
+  "poses": [
+    {
+      "id": "goddess",
+      "name": "Goddess Pose",
+      "sanskrit_name": "Utkata Konasana",
+      "category": "Standing",
+      "difficulty": "Beginner",
+      "description": "A wide-legged standing squat with the feet turned outward, knees tracking in the direction of the toes, and the torso upright.",
+      "steps": [
+        "Stand with the feet comfortably wide apart.",
+        "Turn both feet outward to a comfortable angle.",
+        "Bend the knees and lower the hips while keeping the knees tracking with the toes.",
+        "Keep the torso upright and the spine comfortable.",
+        "Place the hands at the chest or extend the arms comfortably.",
+        "Breathe steadily, then straighten the legs slowly to release."
+      ],
+      "breathing": "Breathe slowly and continuously. Do not hold the breath.",
+      "benefits": [
+        "Develops leg strength and endurance.",
+        "Challenges hip mobility and stability.",
+        "Develops body awareness and controlled posture."
+      ],
+      "common_mistakes": [
+        "Letting the knees collapse inward.",
+        "Forcing a deep squat.",
+        "Losing control of the torso."
+      ],
+      "beginner_modifications": [
+        "Use a shallower squat.",
+        "Keep the stance comfortable.",
+        "Use stable support if balance is difficult."
+      ],
+      "precautions": [
+        "Stop if the pose causes pain.",
+        "Do not force the knees or squat depth.",
+        "Seek qualified professional guidance for persistent or significant pain."
+      ],
+      "suggested_hold": "Start with about 10–20 seconds and gradually increase if comfortable."
+    },
+    {
+      "id": "downward_dog",
+      "name": "Downward-Facing Dog",
+      "sanskrit_name": "Adho Mukha Svanasana",
+      "category": "Inversion / Full-body",
+      "difficulty": "Beginner",
+      "description": "An inverted V-shaped posture in which the hands and feet support the body while the hips move up and back.",
+      "steps": [
+        "Start on your hands and knees.",
+        "Spread the fingers and place the hands approximately shoulder-width apart.",
+        "Tuck the toes and lift the knees.",
+        "Send the hips up and back while lengthening the spine.",
+        "Keep the knees slightly bent if needed to maintain a comfortable spine.",
+        "Press through the hands and keep the head and neck relaxed.",
+        "Breathe steadily and lower the knees to release."
+      ],
+      "breathing": "Maintain slow, steady breathing and avoid holding the breath.",
+      "benefits": [
+        "Strengthens and engages the arms and legs.",
+        "Challenges shoulder and core stability.",
+        "Lengthens the spine and the back of the body."
+      ],
+      "common_mistakes": [
+        "Rounding the lower back.",
+        "Forcing the heels toward the floor.",
+        "Collapsing into the shoulders.",
+        "Placing the hands excessively wide."
+      ],
+      "beginner_modifications": [
+        "Keep the knees slightly bent.",
+        "Use shorter holds.",
+        "Focus on a comfortable spine rather than forcing straight legs or heels to the floor."
+      ],
+      "precautions": [
+        "Stop if you experience pain, dizziness, or unusual discomfort.",
+        "Do not force the heels to touch the floor.",
+        "Seek qualified professional guidance for persistent wrist, shoulder, or other significant pain."
+      ],
+      "suggested_hold": "Start with about 10–20 seconds or several comfortable breaths."
+    },
+    {
+      "id": "warrior_2",
+      "name": "Warrior II",
+      "sanskrit_name": "Virabhadrasana II",
+      "category": "Standing",
+      "difficulty": "Beginner",
+      "description": "A standing posture with a wide stance, one knee bent, the opposite leg extended, and the arms reaching in opposite directions.",
+      "steps": [
+        "Stand in a wide stance facing the long side of the mat.",
+        "Turn the front foot outward and angle the back foot slightly inward.",
+        "Bend the front knee while keeping it aligned over the ankle.",
+        "Extend both arms at approximately shoulder height in opposite directions.",
+        "Keep the torso upright and the shoulders relaxed.",
+        "Gaze toward the front hand if comfortable.",
+        "Hold for several steady breaths, then straighten the front leg and switch sides."
+      ],
+      "breathing": "Breathe steadily and continuously while holding the posture.",
+      "benefits": [
+        "Strengthens the legs and shoulders.",
+        "Challenges hip and core stability.",
+        "Develops balance, endurance, and concentration."
+      ],
+      "common_mistakes": [
+        "Letting the front knee collapse inward.",
+        "Forcing an excessively deep knee bend.",
+        "Leaning the torso forward or backward.",
+        "Tensing the shoulders."
+      ],
+      "beginner_modifications": [
+        "Use a shorter stance.",
+        "Use a smaller front-knee bend.",
+        "Prioritize stable feet and an upright torso."
+      ],
+      "precautions": [
+        "Stop if the posture causes pain.",
+        "Do not force the depth of the front knee bend.",
+        "Seek qualified professional guidance for persistent or significant hip or knee pain."
+      ],
+      "suggested_hold": "Start with about 15–30 seconds per side or several comfortable breaths."
+    },
+    {
+      "id": "plank",
+      "name": "Plank Pose",
+      "sanskrit_name": "Phalakasana",
+      "category": "Strength / Core",
+      "difficulty": "Beginner",
+      "description": "A strong bodyweight posture performed with the hands supporting the upper body and the legs extended, maintaining a stable body line.",
+      "steps": [
+        "Start on your hands and knees.",
+        "Step the feet back one at a time.",
+        "Align the shoulders over or close to the wrists.",
+        "Create a long line from the shoulders through the hips toward the ankles.",
+        "Press firmly through the hands and keep the legs active.",
+        "Gently engage the abdomen while maintaining steady breathing.",
+        "Lower the knees or return to a comfortable position to release."
+      ],
+      "breathing": "Keep breathing steadily. Avoid holding the breath.",
+      "benefits": [
+        "Develops whole-body strength and stability.",
+        "Engages the arms, shoulders, abdomen, hips, and legs.",
+        "Builds body control and endurance."
+      ],
+      "common_mistakes": [
+        "Letting the hips sag.",
+        "Lifting the hips excessively high.",
+        "Collapsing through the shoulders.",
+        "Holding the breath."
+      ],
+      "beginner_modifications": [
+        "Practice with the knees on the floor.",
+        "Start with short holds.",
+        "Focus on maintaining a stable body line rather than maximizing duration."
+      ],
+      "precautions": [
+        "Stop if the pose causes pain.",
+        "Do not force a long hold when form is deteriorating.",
+        "Seek qualified professional guidance for persistent or significant wrist or shoulder pain."
+      ],
+      "suggested_hold": "Start with about 10–20 seconds and increase gradually if good form and steady breathing can be maintained."
+    },
+    {
+      "id": "tree",
+      "name": "Tree Pose",
+      "sanskrit_name": "Vrksasana",
+      "category": "Standing Balance",
+      "difficulty": "Beginner",
+      "description": "A standing balance posture in which one leg supports the body while the other foot rests against the inner standing leg above or below the knee.",
+      "steps": [
+        "Stand upright with both feet grounded.",
+        "Shift your weight onto one leg.",
+        "Place the other foot against the inner standing leg either above or below the knee, not directly on the knee joint.",
+        "Keep the pelvis level and the standing leg stable.",
+        "Look at a steady point ahead.",
+        "Bring the hands to the chest or raise them overhead if comfortable.",
+        "Hold for several breaths, then lower the foot and switch sides."
+      ],
+      "breathing": "Breathe slowly and continuously while maintaining a steady gaze.",
+      "benefits": [
+        "Challenges balance and concentration.",
+        "Develops lower-body stability.",
+        "Improves body awareness and controlled posture."
+      ],
+      "common_mistakes": [
+        "Placing the lifted foot directly on the standing knee.",
+        "Turning the standing foot outward.",
+        "Forcing the lifted knee open.",
+        "Trying to balance without using available support when needed."
+      ],
+      "beginner_modifications": [
+        "Keep the lifted toes on the floor with the heel near the opposite ankle.",
+        "Practice near a wall for support.",
+        "Use a steady gaze and progress gradually."
+      ],
+      "precautions": [
+        "Step down safely if balance is lost.",
+        "Do not place the lifted foot directly on the standing knee.",
+        "Stop if the posture causes pain or unusual discomfort."
+      ],
+      "suggested_hold": "Start with about 10–20 seconds or several comfortable breaths per side."
+    }
+  ]
+}

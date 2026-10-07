@@ -1,0 +1,654 @@
+{
+  "dataset_name": "VITA Yoga Five Pose Instruction Dataset",
+  "version": "1.0",
+  "purpose": "Instruction-tuning dataset for a lightweight yoga assistant",
+  "poses": [
+    "Goddess Pose (Utkata Konasana)",
+    "Downward-Facing Dog (Adho Mukha Svanasana)",
+    "Warrior II (Virabhadrasana II)",
+    "Plank Pose (Phalakasana)",
+    "Tree Pose (Vrksasana)"
+  ],
+  "examples": [
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What is Goddess Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Goddess Pose, commonly called Utkata Konasana, is a wide-legged standing squat. The feet turn outward, the knees bend in line with the toes, and the torso stays upright. It develops leg strength, stability, and body awareness."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "How do I do Goddess Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Stand with your feet wide and turn your toes outward. Bend your knees while keeping them aligned with the direction of your toes. Lower your hips only as far as comfortable, keep your chest upright, and keep your spine neutral. You can bring your hands to your chest or extend your arms comfortably. Breathe steadily while holding the pose, then straighten your legs slowly to release."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "How should I breathe in Goddess Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Breathe slowly and continuously in Goddess Pose. Avoid holding your breath. Coordinate the movement into the squat with a comfortable breath and maintain steady breathing while holding."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What are the benefits of Goddess Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Goddess Pose can build strength and endurance in the legs, challenge hip mobility, and improve stability and body awareness. The exact experience varies from person to person."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What mistakes should I avoid in Goddess Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Avoid letting the knees collapse inward, forcing a deep squat, or losing control of the torso. Keep the knees tracking in the same general direction as the toes and only lower as far as you can comfortably maintain good control."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "Can a beginner do Goddess Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes. Beginners can practice a shallower Goddess Pose first. Keep the feet comfortably wide, bend the knees only as far as feels controlled, and use a wall or stable support if you need extra balance."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "How long should I hold Goddess Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "For a beginner, start with a short hold such as 10–20 seconds and build gradually if it feels comfortable. Focus on steady breathing and controlled alignment rather than holding for a specific maximum time."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What should I do if Goddess Pose causes knee pain?"
+        },
+        {
+          "role": "assistant",
+          "content": "Stop the pose if it causes pain. Do not force the knees deeper into the squat. A qualified yoga instructor or healthcare professional can help determine an appropriate modification, especially if the pain persists or you have a known knee condition."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What is Downward-Facing Dog?"
+        },
+        {
+          "role": "assistant",
+          "content": "Downward-Facing Dog, or Adho Mukha Svanasana, is an inverted V-shaped yoga posture. The hands and feet support the body while the hips move up and back. It is commonly used to lengthen the body and strengthen the arms and legs."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "How do I do Downward Dog?"
+        },
+        {
+          "role": "assistant",
+          "content": "Start on your hands and knees. Spread your fingers and place your hands around shoulder-width apart. Tuck your toes and lift your knees, sending your hips up and back. Lengthen your spine and keep your knees slightly bent if needed. Press through your hands and keep your head relaxed. Breathe steadily, then lower your knees to release."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "Do my heels have to touch the floor in Downward Dog?"
+        },
+        {
+          "role": "assistant",
+          "content": "No. Your heels do not need to touch the floor. If your hamstrings feel tight, keeping the knees slightly bent can help you maintain a longer, more comfortable spine."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What are the benefits of Downward Dog?"
+        },
+        {
+          "role": "assistant",
+          "content": "Downward-Facing Dog can strengthen and engage the arms and legs while lengthening the spine and the back of the body. It also challenges shoulder and core stability."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What are common mistakes in Downward Dog?"
+        },
+        {
+          "role": "assistant",
+          "content": "Common issues include rounding the lower back, forcing the heels toward the floor, turning the hands outward, and placing the hands too wide. Prioritize a comfortable spine and stable hands instead of trying to make the legs completely straight."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "Can beginners do Downward Dog?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes. Beginners can start with short holds and slightly bent knees. Focus on pressing through the hands, lifting the hips, and keeping the spine comfortable rather than trying to achieve a perfect shape."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "How long should I hold Downward Dog?"
+        },
+        {
+          "role": "assistant",
+          "content": "A beginner can start with about 10–20 seconds and gradually increase the hold if comfortable. You can also use several shorter holds instead of one long hold."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What if my wrists hurt in Downward Dog?"
+        },
+        {
+          "role": "assistant",
+          "content": "Come out of the pose if you feel pain. Check that your hands are stable and your weight is distributed through the whole hand rather than collapsing into the wrists. If wrist pain continues, seek guidance from a qualified professional for an appropriate modification."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What is Warrior II?"
+        },
+        {
+          "role": "assistant",
+          "content": "Warrior II, or Virabhadrasana II, is a standing yoga posture with a wide stance, one knee bent, the other leg extended, and the arms reaching in opposite directions. It develops strength, stability, endurance, and focus."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "How do I do Warrior II?"
+        },
+        {
+          "role": "assistant",
+          "content": "Stand in a wide stance facing the long side of your mat. Turn one foot outward and angle the back foot slightly inward. Bend the front knee while keeping it aligned over the ankle. Extend both arms at shoulder height in opposite directions. Keep your torso upright and shoulders relaxed. Gaze toward the front hand if comfortable. Hold for several steady breaths, then straighten the front leg and repeat on the other side."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "Where should my front knee be in Warrior II?"
+        },
+        {
+          "role": "assistant",
+          "content": "Aim to keep the front knee aligned over the ankle and prevent it from collapsing inward. You do not need to force the front thigh to be exactly parallel to the floor; use a depth that you can control comfortably."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What are the benefits of Warrior II?"
+        },
+        {
+          "role": "assistant",
+          "content": "Warrior II can strengthen the legs and shoulders, challenge core and hip stability, and develop balance, endurance, and concentration."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What mistakes should I avoid in Warrior II?"
+        },
+        {
+          "role": "assistant",
+          "content": "Avoid letting the front knee collapse inward, forcing the knee into a deep bend, or leaning the torso forward or backward. Keep the torso upright and distribute effort between both legs."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "Can a beginner practice Warrior II?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes. A beginner can use a shorter stance or a smaller knee bend. Focus on stable feet, an upright torso, comfortable arm extension, and steady breathing."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "How long should I hold Warrior II?"
+        },
+        {
+          "role": "assistant",
+          "content": "A beginner can start with about 15–30 seconds per side or several comfortable breaths. Increase the duration gradually rather than forcing a long hold."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What if Warrior II hurts my hip or knee?"
+        },
+        {
+          "role": "assistant",
+          "content": "Stop if the pose causes pain. Reduce the depth or use a stable support only if a qualified instructor recommends an appropriate modification. Persistent or significant pain should be evaluated by a healthcare professional."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What is Plank Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Plank Pose, commonly called Phalakasana, is a strong bodyweight posture performed with the hands supporting the upper body and the legs extended. The body is kept in a long, stable line from the shoulders toward the ankles."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "How do I do Plank Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Start on your hands and knees. Step your feet back one at a time. Align your shoulders over your wrists and create a long line from your shoulders through your hips toward your ankles. Press firmly through your hands, keep your legs active, and gently engage your abdomen. Keep breathing steadily. Lower your knees or return to a comfortable position to release."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What should my body look like in Plank?"
+        },
+        {
+          "role": "assistant",
+          "content": "Aim for a stable line from your shoulders through your hips to your ankles. Avoid letting the hips sag toward the floor or lifting them excessively. Keep the shoulders stacked over or close to the wrists and maintain an active, comfortable body."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What are the benefits of Plank Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Plank Pose develops whole-body strength and stability, especially through the arms, shoulders, abdomen, hips, and legs. It also trains body control and endurance."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What mistakes should I avoid in Plank?"
+        },
+        {
+          "role": "assistant",
+          "content": "Avoid letting the hips sag, lifting the hips too high, collapsing through the shoulders, or holding your breath. Keep the hands active, shoulders stable, legs engaged, and breathing steady."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "How can a beginner make Plank easier?"
+        },
+        {
+          "role": "assistant",
+          "content": "A beginner can practice Plank with the knees on the floor while keeping the shoulders over the wrists and maintaining a straight line from the shoulders through the hips to the knees. Start with short holds and build gradually."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "How long should I hold Plank?"
+        },
+        {
+          "role": "assistant",
+          "content": "Start with a short, controlled hold such as 10–20 seconds. Increase the time gradually if you can maintain good form and steady breathing."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What should I do if Plank causes wrist or shoulder pain?"
+        },
+        {
+          "role": "assistant",
+          "content": "Stop if you feel pain. You can try a lower-intensity variation such as a knee-supported plank, but persistent or significant wrist or shoulder pain should be discussed with a qualified healthcare professional."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What is Tree Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Tree Pose, or Vrksasana, is a standing balance posture. You stand on one leg while the other foot rests on the inner standing leg, above or below the knee. It develops balance, concentration, and lower-body stability."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "How do I do Tree Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Begin standing upright with both feet grounded. Shift your weight onto one leg. Place the other foot against the inner standing leg, either above or below the knee, but not directly on the knee. Keep your pelvis level and look at a steady point ahead. Bring your hands to your chest or raise them overhead if comfortable. Hold for several breaths, then lower the foot and switch sides."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "Where should I place my foot in Tree Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Place the lifted foot on the inner standing leg either above or below the knee. Do not place the foot directly against the knee joint. If balance is difficult, keep the toes on the floor with the heel near the opposite ankle."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What are the benefits of Tree Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Tree Pose challenges balance, concentration, leg strength, and stability. It also develops body awareness and controlled posture."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What mistakes should I avoid in Tree Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Avoid placing the lifted foot directly on the standing knee, turning the standing foot outward, or forcing the lifted knee open. Keep the standing foot facing forward and use a wall or chair if you need extra stability."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "Can beginners do Tree Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes. Beginners can keep the lifted toes on the floor with the heel near the opposite ankle, or practice near a wall for support. Use a steady gaze and progress gradually."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "How long should I hold Tree Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "Start with several comfortable breaths on each side. A beginner can aim for about 10–20 seconds and gradually increase the hold as balance improves."
+        }
+      ]
+    },
+    {
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are VITA Yoga Assistant. Answer yoga questions clearly and conservatively. Use the pose-specific facts in the training example. Do not invent pose instructions. For safety questions, advise stopping for pain, dizziness, or unusual discomfort and recommend qualified professional guidance for injuries, pregnancy, recent surgery, or significant medical conditions."
+        },
+        {
+          "role": "user",
+          "content": "What if I keep falling out of Tree Pose?"
+        },
+        {
+          "role": "assistant",
+          "content": "That is normal while learning balance. Practice near a wall, keep the lifted foot lower on the standing leg, and focus your eyes on a fixed point. Step down safely whenever you lose balance instead of trying to force the pose."
+        }
+      ]
+    }
+  ]
+}
